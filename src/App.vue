@@ -9,25 +9,25 @@
       <q-input
         filled
         v-model="name"
-        label="Your name *"
-        hint="Name and surname"
+        label="ชื่อ *"
+        hint="ใส่ชื่อนามสกุล"
         lazy-rules
-        :rules="[ val => val && val.length > 0 || 'Please type something']"
+        :rules="[ val => val && val.length > 0 || 'กรุณากรอกชื่อนามสกุล']"
       />
 
       <q-input
         filled
         type="number"
         v-model="age"
-        label="Your age *"
+        label="อายุ *"
         lazy-rules
         :rules="[
-          val => val !== null && val !== '' || 'Please type your age',
-          val => val > 0 && val < 100 || 'Please type a real age'
+          val => val !== null && val !== '' || 'กรุณากรอกอายุ',
+          val => val > 0 && val < 100 || 'กรุณากรอกอายุจริง'
         ]"
       />
 
-      <q-toggle v-model="accept" label="I accept the license and terms" />
+      <q-toggle v-model="accept" label="ฉันอนุญาตและยอมรับเงื่อนไข" />
 
       <div>
         <q-btn label="Submit" type="submit" color="primary"/>
